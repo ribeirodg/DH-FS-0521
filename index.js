@@ -1,39 +1,79 @@
-let nome = 'Daiane';
-let idade = 34;
-let maiorDeIdade = true;
+let pets = [
+    {
+        nome:'Atena', 
+        nomeDono:'Alessandra',
+        idade:6,
+        tipo:'cachorro',
+        raca:'street dog',
+        peso:20,
+        genero:'fêmea',
+        cor:'caramelo',
+        vacinado: true
+    },
+    { nome:'Gaia', 
+    nomeDono:'Alessandra',
+    idade:3,
+    tipo:'cachorro',
+    raca:'street dog',
+    peso:20,
+    genero:'fêmea',
+    cor:'branco',
+    vacinado: true
+},
+{nome:'Leão', 
+nomeDono:'Daiane',
+idade:12,
+tipo:'cachorro',
+raca:'pastor alemão',
+peso:25,
+genero:'macho',
+cor:'preto com caramelo',
+vacinado: true
+}
+]
 
-let pessoa = {
-    nome: nome,
-    idade: idade,
-    maiorDeIdade: maiorDeIdade
+const listarPets = () => 
+{
+    for(let i=0; i < pets.length; i++){
+        console.log('Nome: '+ pets[i].nome)
+    } 
+
+    function cadastrarPets (arrayPets, objetoPet){
+        return arrayPets.push (objetoPet)
+        {nome:'Gaia', 
+        nomeDono:'Alessandra',
+        idade:3,
+        tipo:'cachorro',
+        raca:'street dog',
+        peso:20,
+        genero:'fêmea',
+        cor:'branco',
+        vacinado: true
+            
+        }
+    }
+function validaDados (objetoPet){
+    return (objeto.nome && 
+        objetoPet.nomeDono &&
+        objetoPet.idade &&
+        objetoPet.tipo &&
+        objetoPet.raca && 
+        objetoPet.peso && 
+        objetoPet.genero && 
+        objetoPet.cor && 
+        objetoPet.vacinado    )
+}
+}
+listarPets();
+
+
+function cadastrasPet(arrayPets,objetoPet) {
+if(typeof objetoPet == 'object') {
+    if(validaDados (objetoPet))
+    return arrayPets.push(objetoPet)
+} else {
+    console.log('Insira um objeto válido')
+}
 }
 
-// console.log(pessoa.nome)
 
-let  animais = ['macaco', 'papagaio', 'cobra', 'elefante']
-
-let numero1 = 10
-let numero2 = 20
-
-let resultadoSoma = numero1 + numero2
-console.log ('O resultado da soma é ' + resultadoSoma)
-
-let resultadoSubtracao = numero1 - numero2
-console.log ('O resultado da subtração é ' + resultadoSubtracao)
-
-let resultadoDivisao = numero1 / numero2
-console.log ('O resultado da Divisão é ' + resultadoDivisao)
-
-let resultadoMultiplicacao = numero1 * numero2
-console.log ('O resultado da multiplicação é ' + resultadoMultiplicacao)
-
-if (numero1 > numero2) {
-    console.log ('O' + numero1 + ' é maior que o ' + numero2)
-}
-else if {
-    console.log ('O' + numero2 + ' é maior que o ' + numero1)
-}
-
-else {
-    console.log ('Os números são iguais')
-}
