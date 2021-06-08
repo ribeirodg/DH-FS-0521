@@ -1,79 +1,79 @@
-let pets = [
-    {
-        nome:'Atena', 
-        nomeDono:'Alessandra',
-        idade:6,
-        tipo:'cachorro',
-        raca:'street dog',
-        peso:20,
-        genero:'fêmea',
-        cor:'caramelo',
-        vacinado: true
-    },
-    { nome:'Gaia', 
-    nomeDono:'Alessandra',
-    idade:3,
-    tipo:'cachorro',
-    raca:'street dog',
-    peso:20,
-    genero:'fêmea',
-    cor:'branco',
-    vacinado: true
-},
-{nome:'Leão', 
-nomeDono:'Daiane',
-idade:12,
-tipo:'cachorro',
-raca:'pastor alemão',
-peso:25,
-genero:'macho',
-cor:'preto com caramelo',
-vacinado: true
-}
-]
+//------------Callback
+function nomeCompleto(nome, sobrenome) {
+    return nome + ' ' + sobrenome;
+  };
+  
+  function saudar(nome, sobrenome, callback) {
+    return 'Olá ' + callback(nome, sobrenome)+'!';
+  };
+  
+  console.log(saudar('João', 'Neves', nomeCompleto))
 
-const listarPets = () => 
-{
-    for(let i=0; i < pets.length; i++){
-        console.log('Nome: '+ pets[i].nome)
-    } 
+  //-------------------- Metodos de arrays
+//map(), find(),filter(),reduce(),forEach()
+var numeros = [2, 4, 6,8];
+var dobroNumeros = numeros.map(function(numero){
+	// Multiplicamos por 2 cada número
+return numero * 3;
+});
 
-    function cadastrarPets (arrayPets, objetoPet){
-        return arrayPets.push (objetoPet)
-        {nome:'Gaia', 
-        nomeDono:'Alessandra',
-        idade:3,
-        tipo:'cachorro',
-        raca:'street dog',
-        peso:20,
-        genero:'fêmea',
-        cor:'branco',
-        vacinado: true
-            
-        }
-    }
-function validaDados (objetoPet){
-    return (objeto.nome && 
-        objetoPet.nomeDono &&
-        objetoPet.idade &&
-        objetoPet.tipo &&
-        objetoPet.raca && 
-        objetoPet.peso && 
-        objetoPet.genero && 
-        objetoPet.cor && 
-        objetoPet.vacinado    )
-}
-}
-listarPets();
+console.log(dobroNumeros);
 
+//exemplo find
+var frutas = ['Uva', 'Maçã', 'Cereja', 'Morango', 'Abacaxi'];
 
-function cadastrasPet(arrayPets,objetoPet) {
-if(typeof objetoPet == 'object') {
-    if(validaDados (objetoPet))
-    return arrayPets.push(objetoPet)
-} else {
-    console.log('Insira um objeto válido')
-}
+var moraNoMar = frutas.find(function(fruta){
+	return fruta == 'Abacaxi';
+});
+console.log(moraNoMar);
+
+//Exemplo filter 
+var frutas2 = ['Uva', 'Maçã', 'Cereja', 'Morango', 'Abacaxi'];
+
+var maiores = frutas2.filter(function(fruta){
+	return fruta == 'Maçã'  ;
+});
+
+//exemplo foreach e for/of
+var paises = ['Argentina', 'Brasil', 'Colombia'];
+paises.forEach(function(pais){
+	console.log(pais);
+});
+
+for (let pais of paises){
+    console.log(pais)
 }
 
+//Objeto Date
+let dataAgora = new Date();
+console.log("Retorna o dia: " +dataAgora.getDate() )
+console.log("Retorna o mês: " +dataAgora.getMonth())
+console.log("Retorna o dia da semana: "+dataAgora.getDay() )
+console.log("Retorna o ano: "+dataAgora.getFullYear() )
+dataAgora.setDate(5)
+ console.log(dataAgora)
+// Desestruturando arrays
+let array = ['Roxo','Azul','Amarelo']
+let [cor1,...total] = array
+console.log(total)
+
+// Desestruturando objetos
+let pessoa = {nome: 'Laura', idade: 31, faltas: 3};
+let {nome, faltas} = pessoa;
+console.log(nome,faltas)
+console.log(pessoa.nome, pessoa.faltas)
+//Spread
+//O operador spread pode ser usado em qualquer elemento iterável. 
+//Permite-nos copiar e mover dados de um lugar para outro de forma eficiente.
+//Spread Operator Array
+let clubesUm = ['Boca', 'Palmeiras', 'Barcelona'];
+let clubesDois = ['River', 'Santos', 'Inter Milan'];
+let todosOsClubes = [...clubesUm,...clubesDois];
+console.log(todosOsClubes)
+//Spread Operator Objetos
+
+let carro = {marca:'Ferrari', kms:0, ano:2019};
+let pilotoUm = {nome:'Vettel', idade:32, ...carro};
+let pilotoDois = {nome:'Leclerc', idade:21, ...carro};
+console.log(pilotoUm)
 
