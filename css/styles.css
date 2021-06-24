@@ -1,16 +1,16 @@
-header {
+/* header {
     height: 10%;
     width: 100%;
     background-color: #ffb90f;
-    margin-top: 70px;
-}
+    margin-top: 70px; */
+/* }
 
 .img-200 {
-    width: 200px;
+    width: 100px;
 }
 
 /* HEADER */
-html, body {
+/* html, body {
     height: 100%;
 }
 header {
@@ -18,39 +18,40 @@ height: 15%;
 width: 100%;
 background-color: #ffb90f;
 margin-top:70px;
-/* position: relative; */
+position: relative; */ 
+
+/* display: flex;
+justify-content: space-between;
+width: 45%;
+flex-grow: 0.3;
+list-style: none;
+font-size: 20px;
+color: white;
+font-weight: bold;
 }
 
-headernav {
-    display: flex;
-    width: 50%;
-    justify-content: space-between;
-    align-items: center;
-}
 
 header nav img {
-
-    /* position: absolute;
+    position: absolute;
     width: 200px;
-} */
+}
 
 header nav ul {
 
-    /* list-style: none;
-} */
+    list-style: none;
+}
 
 header nav ul li {
 
-    /* display: inline-block ;
+    display: inline-block ;
     margin-left: 150px ;
     color: white;
 } */
 
-header nav  form {
+/* header nav  form {
 
-/* margin-left: 400px;
-} */
-
+margin-left: 400px;
+}
 
 main {
     height:650px;
@@ -65,9 +66,9 @@ width:300px;
 height: 300px;
 background-position: center;
 background-size: cover;
-display: inline-block ;
+display: inline-block ; */
 
-}
+/* }
 
 section article img {
 width: 70px;
@@ -81,8 +82,8 @@ height: 40px;
 font-size: 20px;
 text-align: center;
 margin-top: 50px;
-}
-
+} */
+/* 
 section article button{
 width: 90px;
 background-color: #ff4500;
@@ -103,4 +104,97 @@ border-radius: 5px;
 color:white;
 line-height: 100px;
 
-}
+} */
+
+/* definindo altura da pagina para conseguir aplicar uma altura 
+no elemento header para que consiga trabalhar com porcentagem */
+html, body {
+    height: 100%;
+  }
+  
+  /* HEADER */
+  header {
+    height: 15%;
+    width: 100%;
+    background-color: #ffb90f;
+    margin-top: 70px;
+  }
+  
+  header nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  header nav img {
+    width: 96px;
+  }
+  
+  header nav ul {
+    display: flex;
+    justify-content: flex-start;
+    width: 45%;
+    flex-grow: 0.3;
+    list-style: none;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  header nav ul li {
+    margin-right: 40px;
+  }
+  
+  /* SECTION DE PRODUTOS */
+  main {
+    height: 650px;
+    margin: 40px auto;
+    width: 960px;
+  }
+  
+  main section article {
+    display: inline-block;
+    justify-content: space-between;
+    background-image: url('../img/product-1.jpg');
+    margin: 0 15px 15px 0;
+    width: 300px;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  section article img {
+    width: 70px;
+    margin: 5px 0 0 226px;
+  }
+  
+  section article div {
+    background: #101010;
+    color: white;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 10px;
+  }
+  
+  section article button {
+    width: 90px;
+    height: 40px;
+    background: #ff4500;
+    color: white;
+    margin: 45px 0 0 110px;
+  }
+  
+  /* FOOTER */
+  footer {
+    width: 100%;
+    height: 100px;
+    background-color: #ffb90f;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+    color: white;
+    font-size: 20px;
+    line-height: 100px;
+  }
