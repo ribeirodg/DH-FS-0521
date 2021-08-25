@@ -8,6 +8,9 @@ const cabideController= {
       },
     entrar:(req,res) => {
       return res.render("entrar")  
-      }
+      },
+    dadoscliente:(req,res) => {
+      return res.render("dadoscliente")  
+        }
 }
 module.exports = cabideController;
